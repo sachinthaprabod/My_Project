@@ -1,0 +1,637 @@
+/* ==========================================================================
+   Hotel S&B - Primary Stylesheet
+   ICT 2209 Web Technologies Mini Project - Rajarata University of Sri Lanka
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap');
+
+:root {
+  --primary: #DC2626;          /* Spicy Red */
+  --primary-hover: #B91C1C;
+  --secondary: #D97706;        /* Saffron Amber */
+  --secondary-hover: #B45309;
+  --dark: #0F172A;             /* Slate Charcoal */
+  --dark-light: #1E293B;
+  --light-bg: #FFFDF9;         /* Warm Ivory Cream */
+  --card-bg: #FFFFFF;
+  --text-main: #334155;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --gold: #F59E0B;
+  --success: #10B981;
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 35px -5px rgba(15, 23, 42, 0.12), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset & Typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  padding: 0.85rem 0;
+  transition: var(--transition);
+}
+
+.navbar-brand img {
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.03);
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary) !important;
+  background-color: rgba(220, 38, 38, 0.06);
+}
+
+/* Cart Badge Button in Nav */
+.btn-cart-nav {
+  position: relative;
+  background-color: #FEF2F2;
+  color: var(--primary);
+  border: 1px solid #FCA5A5;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 0.45rem 1.1rem;
+  transition: var(--transition);
+}
+
+.btn-cart-nav:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-cart-nav .badge-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: var(--secondary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+/* Hero Carousel */
+.hero-slider .carousel-item {
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.6) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide-1 {
+  background-color: #1E293B;
+  background-image: radial-gradient(#334155 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid var(--gold);
+  color: #FEF08A;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.hero-title span {
+  color: #F87171;
+}
+
+.hero-desc {
+  color: #E2E8F0;
+  font-size: 1.1rem;
+  max-width: 580px;
+  margin-bottom: 1.75rem;
+}
+
+/* Buttons */
+.btn-primary-sb {
+  background: linear-gradient(135deg, var(--primary) 0%, #B91C1C 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  transition: var(--transition);
+}
+
+.btn-primary-sb:hover {
+  background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.btn-secondary-sb {
+  background: linear-gradient(135deg, var(--secondary) 0%, #B45309 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 0.65rem 1.6rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+  transition: var(--transition);
+}
+
+.btn-secondary-sb:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+
+.btn-outline-sb {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.btn-outline-sb:hover {
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+
+/* Feature Cards */
+.feature-box {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  text-align: center;
+  height: 100%;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: #FECACA;
+}
+
+.feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: #FEF2F2;
+  color: var(--primary);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.feature-box:hover .feature-icon-wrapper {
+  background: var(--primary);
+  color: #fff;
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* Category Filter Tabs (Dynamic JS feature) */
+.category-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background: #fff;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0.5rem 1.4rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  color: var(--dark);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Food Menu Cards */
+.food-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: #FCA5A5;
+}
+
+.food-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background-color: #1E293B;
+}
+
+.food-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-img-container img {
+  transform: scale(1.08);
+}
+
+.food-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #FEF08A;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  z-index: 2;
+}
+
+.food-category-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+.food-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.food-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  flex-grow: 1;
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.food-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.food-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.btn-add-cart {
+  background-color: #FEF2F2;
+  color: var(--primary);
+  border: 1.5px solid #FCA5A5;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-add-cart:hover {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: scale(1.04);
+}
+
+/* Floating Cart Drawer / Offcanvas */
+.offcanvas-cart {
+  width: 420px !important;
+  max-width: 95vw;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  padding-right: 0.75rem;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin-bottom: 0.2rem;
+}
+
+.cart-item-price {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cart-qty-controls {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #F8FAFC;
+}
+
+.btn-qty {
+  background: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.btn-qty:hover {
+  background-color: #E2E8F0;
+  color: var(--primary);
+}
+
+.qty-display {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* Forms & Validation (Section 2.2, 2.3, 3.3, 3.4) */
+.form-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+
+.form-control, .form-select {
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  border: 1.5px solid var(--border-color);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Interactive Toast Notifications */
+.sb-toast-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1090;
+}
+
+.sb-toast {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+  animation: slideInRight 0.35s ease forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Dashboard Order Badges */
+.badge-status-pending {
+  background-color: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FCD34D;
+}
+
+.badge-status-preparing {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #93C5FD;
+}
+
+.badge-status-out-for-delivery {
+  background-color: #FDF4FF;
+  color: #7E22CE;
+  border: 1px solid #E9D5FF;
+}
+
+.badge-status-delivered {
+  background-color: #ECFDF5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-status-cancelled {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FCA5A5;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: #94A3B8;
+  margin-top: auto;
+  border-top: 3px solid var(--primary);
+}
+
+footer a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: #F87171;
+  padding-left: 4px;
+}
+
+.footer-heading {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-slider .carousel-item {
+    height: 440px;
+  }
+  .form-card {
+    padding: 1.5rem;
+  }
+}

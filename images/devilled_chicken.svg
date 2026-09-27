@@ -1,0 +1,68 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2D3748" />
+      <stop offset="100%" stop-color="#1A202C" />
+    </radialGradient>
+    <radialGradient id="plateGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF1F2" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </radialGradient>
+    <linearGradient id="foodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#16A34A" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Atmospheric Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)" />
+
+  <!-- Wooden Table Texture Glow -->
+  <ellipse cx="300" cy="270" rx="260" ry="110" fill="#000" opacity="0.4" filter="blur(20px)"/>
+
+  <!-- Serving Plate Platter -->
+  <ellipse cx="300" cy="210" rx="190" ry="120" fill="url(#plateGrad)" filter="url(#shadow)" stroke="#E2E8F0" stroke-width="4"/>
+  <ellipse cx="300" cy="210" rx="160" ry="98" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+
+  <!-- Dish Core Illustration Base -->
+  <ellipse cx="300" cy="205" rx="140" ry="80" fill="url(#foodGrad)" filter="url(#shadow)"/>
+
+  <!-- Garnishes & Texture elements -->
+  <g transform="translate(300, 200)">
+    <!-- Rice/Kottu/Meat texture specks -->
+    <circle cx="-60" cy="-20" r="14" fill="#FEF08A" opacity="0.8"/>
+    <circle cx="-30" cy="15" r="18" fill="#F97316" opacity="0.9"/>
+    <circle cx="20" cy="-15" r="16" fill="#EA580C" opacity="0.9"/>
+    <circle cx="50" cy="10" r="15" fill="#FEF08A" opacity="0.85"/>
+    <circle cx="-5" cy="0" r="22" fill="#DC2626" opacity="0.95"/>
+    
+    <!-- Herbs / Coriander / Chili slices -->
+    <path d="M-20,-10 C-10,-35 15,-25 0,-5 Z" fill="#22C55E" />
+    <path d="M10,-15 C25,-30 40,-10 20,5 Z" fill="#16A34A" />
+    <circle cx="-40" cy="5" r="5" fill="#EF4444"/>
+    <circle cx="35" cy="-5" r="6" fill="#EF4444"/>
+    <circle cx="5" cy="15" r="4" fill="#22C55E"/>
+    
+    <!-- Steam waves -->
+    <path d="M-20,-50 Q-10,-70 -20,-90" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M5,-55 Q15,-75 5,-95" stroke="#FFFFFF" stroke-width="3.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M30,-48 Q40,-68 30,-88" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Top Glass Highlight Overlay -->
+  <rect x="0" y="315" width="600" height="85" fill="#0F172A" opacity="0.92"/>
+  <line x1="0" y1="315" x2="600" y2="315" stroke="#E11D48" stroke-width="3"/>
+
+  <!-- Dish Title and Subtitle -->
+  <text x="30" y="348" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Spicy Devilled Chicken</text>
+  <text x="30" y="375" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="13" font-weight="400" fill="#94A3B8">Glazed Crispy Chicken, Capsicum & Sweet Chili</text>
+
+  <!-- Hotel S&B Badge -->
+  <g transform="translate(470, 335)">
+    <rect x="0" y="0" width="105" height="32" rx="16" fill="#E11D48" />
+    <text x="52" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">HOTEL S&amp;B</text>
+  </g>
+</svg>

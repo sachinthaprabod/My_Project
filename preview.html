@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel S&amp;B - Authentic Sri Lankan Flavours &amp; Online Ordering</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom Project Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <img src="images/logo.svg" alt="Hotel S&amp;B Logo">
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#hotelSbNav" aria-controls="hotelSbNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="hotelSbNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home"><i class="bi bi-house-door me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu"><i class="bi bi-journal-text me-1"></i> Food Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#why-us"><i class="bi bi-award me-1"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i> Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <!-- Shopping Cart Trigger Button -->
+          <button type="button" class="btn btn-cart-nav d-inline-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer">
+            <i class="bi bi-bag-heart-fill me-1"></i>
+            <span>Cart</span>
+            <span class="badge-count cart-count-badge" style="display: none;">0</span>
+          </button>
+
+          <a href="#menu" class="btn btn-primary-sb btn-sm px-3">
+            <i class="bi bi-lightning-charge-fill me-1"></i> Order Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       Hero Section with Interactive Image Slider (Carousel)
+       ========================================================================= -->
+  <section id="home" class="hero-slider">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Slide 1: Kottu -->
+        <div class="carousel-item active hero-slide-1">
+          <div class="hero-overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <span class="hero-tag"><i class="bi bi-fire me-1"></i> Hot From The Griddle</span>
+                  <h1 class="hero-title mb-3">Craving Authentic <br><span>Sri Lankan Kottu</span>?</h1>
+                  <p class="hero-desc">Chopped to perfection with spiced tender meats, fresh garden veggies, and rich curry gravy. Taste the legendary night-bite flavours right at home.</p>
+                  <div class="d-flex flex-wrap gap-3">
+                    <a href="#menu" class="btn btn-primary-sb btn-lg"><i class="bi bi-cart3 me-1"></i> Order Kottu Online</a>
+                    <a href="#menu" class="btn btn-outline-light btn-lg rounded-pill"><i class="bi bi-arrow-down me-1"></i> View Specials</a>
+                  </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                  <img src="images/kottu_chicken.svg" alt="Chicken Kottu" class="img-fluid rounded-4 shadow-lg" style="max-height: 350px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Dum Biryani -->
+        <div class="carousel-item hero-slide-1">
+          <div class="hero-overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <span class="hero-tag"><i class="bi bi-stars me-1"></i> Slow-Dum Perfection</span>
+                  <h1 class="hero-title mb-3">Royal Basmati <br><span>Chicken &amp; Mutton Biryani</span></h1>
+                  <p class="hero-desc">Infused with saffron, cardamom, cloves, and tender marinated meats, served with fresh mint sambol, hard-boiled egg, and cool raita.</p>
+                  <div class="d-flex flex-wrap gap-3">
+                    <a href="#menu" class="btn btn-secondary-sb btn-lg"><i class="bi bi-bag-check me-1"></i> Explore Biryanis</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill">Party Orders</a>
+                  </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                  <img src="images/biryani_chicken.svg" alt="Chicken Biryani" class="img-fluid rounded-4 shadow-lg" style="max-height: 350px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Wok Fried Rice -->
+        <div class="carousel-item hero-slide-1">
+          <div class="hero-overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <span class="hero-tag"><i class="bi bi-lightning-charge me-1"></i> Wok Fresh Specials</span>
+                  <h1 class="hero-title mb-3">Special Mixed <span>Fried Rice</span> &amp; Devilled</h1>
+                  <p class="hero-desc">Wok-fired with succulent prawns, tender chicken, crispy devilled chili sides, and sweet homemade chili paste. Ready for quick delivery.</p>
+                  <div class="d-flex flex-wrap gap-3">
+                    <a href="#menu" class="btn btn-primary-sb btn-lg"><i class="bi bi-basket me-1"></i> Order Fried Rice</a>
+                    <a href="#menu" class="btn btn-outline-light btn-lg rounded-pill">View All 8 Dishes</a>
+                  </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                  <img src="images/rice_mixed.svg" alt="Fried Rice" class="img-fluid rounded-4 shadow-lg" style="max-height: 350px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Why Choose Us Section
+       ========================================================================= -->
+  <section id="why-us" class="py-5 bg-white border-bottom">
+    <div class="container py-4">
+      <div class="row text-center mb-4">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-danger fw-bold text-uppercase small">The Hotel S&amp;B Promise</span>
+          <h2 class="display-6 fw-bold">Fresh, Authentic &amp; Delivered Fast</h2>
+          <p class="text-muted">We combine generational Sri Lankan culinary tradition with high quality hygiene and express delivery to your doorstep.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="bi bi-fire"></i></div>
+            <h5 class="fw-bold mb-2">Live Griddle &amp; Wok</h5>
+            <p class="text-muted small mb-0">Every kottu and rice dish is cooked fresh upon receiving your order, never pre-packed or re-heated.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="bi bi-shield-check"></i></div>
+            <h5 class="fw-bold mb-2">100% Quality Spices</h5>
+            <p class="text-muted small mb-0">We use authentic Sri Lankan roasted curry powders, organic ghee, and freshly ground whole aromatic spices.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-bold mb-2">Express Hot Delivery</h5>
+            <p class="text-muted small mb-0">Insulated thermal food delivery ensuring your rice, roti, and kottu arrive steaming hot within 30-45 minutes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="bi bi-phone"></i></div>
+            <h5 class="fw-bold mb-2">Effortless Ordering</h5>
+            <p class="text-muted small mb-0">Browse our dishes, customize your quantities, add special cooking notes, and track your order online.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Featured Food Menu (8 Items) with Live Filters & Search
+       ========================================================================= -->
+  <section id="menu" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-4">
+        <span class="text-danger fw-bold text-uppercase small">Freshly Prepared Sri Lankan Delicacies</span>
+        <h2 class="display-5 fw-bold font-serif">Hotel S&amp;B Online Ordering Menu</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 650px;">
+          Choose from our 8 signature dishes. Click <strong>Add to Order</strong> on any item to build your basket and place an order!
+        </p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <div class="input-group shadow-sm">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+            <input type="text" id="foodSearchInput" class="form-control border-start-0 py-2 ps-0" placeholder="Search dishes (e.g. Kottu, Biryani, Rice)...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs (Dynamic JS Filtering) -->
+      <div class="category-filter-nav">
+        <button type="button" class="filter-btn active" data-category="All"><i class="bi bi-grid-fill me-1"></i> All Items (8)</button>
+        <button type="button" class="filter-btn" data-category="Rice"><i class="bi bi-pie-chart-fill me-1"></i> Rice Dishes</button>
+        <button type="button" class="filter-btn" data-category="Kottu"><i class="bi bi-fire me-1"></i> Kottu Roti</button>
+        <button type="button" class="filter-btn" data-category="Biryani"><i class="bi bi-stars me-1"></i> Dum Biryani</button>
+        <button type="button" class="filter-btn" data-category="Curries"><i class="bi bi-egg-fried me-1"></i> Curries &amp; Roti</button>
+        <button type="button" class="filter-btn" data-category="Sides"><i class="bi bi-shield-shaded me-1"></i> Devilled / Sides</button>
+        <button type="button" class="filter-btn" data-category="Beverages"><i class="bi bi-cup-straw me-1"></i> Drinks</button>
+      </div>
+
+      <!-- 8 Signature Food Cards Grid -->
+      <div class="row g-4" id="foodGridContainer">
+        
+        <!-- Item 1: Special Mixed Fried Rice -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Rice" data-name="Special Mixed Fried Rice" data-desc="Wok-tossed premium Basmati rice loaded with chicken, lagoon prawns, egg ribbons, spring onions, and carrots. Served with our signature sweet-chili paste and fresh salad.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/rice_mixed.svg" alt="Special Mixed Fried Rice">
+              <span class="food-badge"><i class="bi bi-award-fill me-1"></i> Bestseller</span>
+              <span class="food-category-tag">Rice</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Special Mixed Fried Rice</h4>
+              <p class="food-desc">Wok-tossed premium Basmati rice loaded with succulent chicken, fresh lagoon prawns, fluffy egg ribbons, spring onions, and carrots. Served with sweet-chili paste.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 1,450.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="1" data-name="Special Mixed Fried Rice" data-price="1450">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Sri Lankan Chicken Kottu -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Kottu" data-name="Sri Lankan Chicken Kottu" data-desc="Chopped fresh godamba roti flash-fried on the hot griddle with marinated spiced chicken, crisp leeks, carrots, egg, and our secret hotel aromatic curry gravy.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/kottu_chicken.svg" alt="Sri Lankan Chicken Kottu">
+              <span class="food-badge"><i class="bi bi-fire me-1"></i> Popular</span>
+              <span class="food-category-tag">Kottu</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Sri Lankan Chicken Kottu</h4>
+              <p class="food-desc">Chopped fresh godamba roti flash-fried on the hot griddle with marinated spiced chicken, crisp leeks, carrots, egg, and our secret hotel aromatic curry gravy.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 1,200.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="2" data-name="Sri Lankan Chicken Kottu" data-price="1200">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Seafood Cheese Kottu -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Kottu" data-name="Seafood Cheese Kottu" data-desc="Hotel S&B specialty! Godamba roti shredded with tender cuttlefish, prawns, and fish, blended in creamy rich melted mozzarella and spiced cheese sauce.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/kottu_cheese.svg" alt="Seafood Cheese Kottu">
+              <span class="food-badge"><i class="bi bi-star-fill me-1"></i> Chef Special</span>
+              <span class="food-category-tag">Kottu</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Seafood Cheese Kottu</h4>
+              <p class="food-desc">Hotel S&amp;B specialty! Godamba roti shredded with tender cuttlefish, prawns, and fish, blended in creamy rich melted mozzarella and spiced cheese sauce.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 1,850.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="3" data-name="Seafood Cheese Kottu" data-price="1850">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Hotel S&B Chicken Dum Biryani -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Biryani" data-name="Hotel S&B Chicken Dum Biryani" data-desc="Authentic slow-dum cooked fragrant long-grain Basmati infused with saffron, cardamom, and clove. Layered with roasted spiced chicken quarter, hard-boiled egg, mint sambol, and cucumber raita.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/biryani_chicken.svg" alt="Hotel S&B Chicken Dum Biryani">
+              <span class="food-badge"><i class="bi bi-crown-fill me-1"></i> House Special</span>
+              <span class="food-category-tag">Biryani</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Hotel S&amp;B Chicken Dum Biryani</h4>
+              <p class="food-desc">Authentic slow-dum cooked fragrant long-grain Basmati infused with saffron, cardamom, and clove. Layered with roasted spiced chicken quarter, boiled egg, mint sambol, and raita.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 1,600.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="4" data-name="Hotel S&B Chicken Dum Biryani" data-price="1600">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Royal Mutton Biryani -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Biryani" data-name="Royal Mutton Biryani" data-desc="Tender fall-off-the-bone mutton chunks simmered in aromatic whole spices, layered with fragrant ghee rice, fried golden onions, and roasted cashews.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/biryani_mutton.svg" alt="Royal Mutton Biryani">
+              <span class="food-badge"><i class="bi bi-gem me-1"></i> Premium</span>
+              <span class="food-category-tag">Biryani</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Royal Mutton Biryani</h4>
+              <p class="food-desc">Tender fall-off-the-bone mutton chunks simmered in aromatic whole spices, layered with fragrant ghee rice, fried golden onions, and roasted cashews.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 2,100.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="5" data-name="Royal Mutton Biryani" data-price="2100">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Egg Roti with Chicken Curry Set -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Curries" data-name="Egg Roti with Chicken Curry Set" data-desc="Three golden crisp egg-stuffed rotis served hot with thick coconut dhal curry, fiery onion sambol (lunu miris), and rich Sri Lankan country chicken curry.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/egg_roti.svg" alt="Egg Roti with Chicken Curry Set">
+              <span class="food-badge"><i class="bi bi-egg me-1"></i> Traditional</span>
+              <span class="food-category-tag">Curries</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Egg Roti with Chicken Curry Set</h4>
+              <p class="food-desc">Three golden crisp egg-stuffed rotis served hot with thick coconut dhal curry, fiery onion sambol (lunu miris), and rich Sri Lankan country chicken curry.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 850.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="6" data-name="Egg Roti with Chicken Curry Set" data-price="850">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Spicy Devilled Chicken -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Sides" data-name="Spicy Devilled Chicken" data-desc="Golden crispy battered chicken cubes tossed in a wok with capsicum, ripe tomatoes, red onions, banana peppers, and a mouthwatering sweet & fiery chili glaze.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/devilled_chicken.svg" alt="Spicy Devilled Chicken">
+              <span class="food-badge"><i class="bi bi-lightning me-1"></i> Spicy</span>
+              <span class="food-category-tag">Sides</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Spicy Devilled Chicken</h4>
+              <p class="food-desc">Golden crispy battered chicken cubes tossed in a wok with capsicum, ripe tomatoes, red onions, banana peppers, and sweet &amp; fiery chili glaze.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 1,350.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="7" data-name="Spicy Devilled Chicken" data-price="1350">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Signature Royal Faluda & Iced Milo -->
+        <div class="col-lg-4 col-md-6 food-item-col" data-category="Beverages" data-name="Signature Royal Faluda & Iced Milo" data-desc="Refreshing chilled milk infused with sweet rose syrup, basil seeds (kasakasa), grass jelly strips, topped with a scoop of vanilla ice cream, or blended iced Milo.">
+          <div class="food-card">
+            <div class="food-img-container">
+              <img src="images/faluda.svg" alt="Signature Royal Faluda">
+              <span class="food-badge"><i class="bi bi-droplet-half me-1"></i> Refreshing</span>
+              <span class="food-category-tag">Beverages</span>
+            </div>
+            <div class="food-body">
+              <h4 class="food-title">Signature Royal Faluda</h4>
+              <p class="food-desc">Refreshing chilled milk infused with sweet rose syrup, basil seeds (kasakasa), grass jelly strips, topped with a rich scoop of vanilla ice cream.</p>
+              <div class="food-footer">
+                <div class="food-price">Rs. 550.00</div>
+                <button type="button" class="btn-add-cart btn-add-to-cart" data-id="8" data-name="Signature Royal Faluda" data-price="550">
+                  <i class="bi bi-bag-plus"></i> Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="noMenuResults" class="text-center py-5" style="display: none;">
+        <i class="bi bi-search text-muted" style="font-size: 3rem;"></i>
+        <h5 class="mt-3 text-secondary">No dishes match your search</h5>
+        <p class="text-muted small">Try searching for other keywords like "kottu", "biryani", or "rice".</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Customer Reviews Section
+       ========================================================================= -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="text-danger fw-bold text-uppercase small">What Our Food Lovers Say</span>
+        <h2 class="display-6 fw-bold">Loved Across the City</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted fst-italic">"The Chicken Dum Biryani at Hotel S&amp;B is hands down the best in the area. Fragrant rice, tender spiced chicken quarter, and the raita was delicious!"</p>
+            <div class="mt-auto d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">KS</div>
+              <div>
+                <h6 class="mb-0 fw-bold">Kamal Silva</h6>
+                <small class="text-muted">Verified Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted fst-italic">"The Seafood Cheese Kottu is out of this world! Loaded with real mozzarella, cuttlefish, and prawns. Fast online order system and prompt delivery."</p>
+            <div class="mt-auto d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">NP</div>
+              <div>
+                <h6 class="mb-0 fw-bold">Nimali Perera</h6>
+                <small class="text-muted">Verified Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted fst-italic">"Their Special Mixed Fried Rice with the fiery sweet chili paste and spicy devilled chicken is our weekend family staple. Super easy online checkout."</p>
+            <div class="mt-auto d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">DW</div>
+              <div>
+                <h6 class="mb-0 fw-bold">Dilani Weerasinghe</h6>
+                <small class="text-muted">Verified Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Contact Section
+       ========================================================================= -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h3 class="display-6 fw-bold font-serif mb-3">Hotel S&amp;B Inquiries</h3>
+          <p class="text-muted mb-4">Feel free to contact us for party orders, catering, or doorstep delivery tracking.</p>
+          
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="bi bi-geo-alt-fill text-danger fs-4"></i>
+            <div>
+              <strong>Address:</strong><br>
+              <span class="text-muted">No. 88, Kandy Road, Anuradhapura, Sri Lanka</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="bi bi-telephone-fill text-danger fs-4"></i>
+            <div>
+              <strong>Hotline:</strong><br>
+              <span class="text-muted">+94 25 222 3456 / +94 77 123 4567</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="bi bi-clock-fill text-danger fs-4"></i>
+            <div>
+              <strong>Kitchen Hours:</strong><br>
+              <span class="text-muted">Mon – Sun: 10:00 AM – 11:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-light">
+            <h4 class="fw-bold mb-3 font-serif">Send Us a Direct Message</h4>
+            <form id="contactForm" onsubmit="event.preventDefault(); showToast('Thank you! Your message has been received.', 'success'); this.reset();">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="contact_name" required placeholder="e.g. Sunil Perera">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="contact_email" required placeholder="name@example.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="contact_subject" placeholder="Catering or Table Inquiry">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" id="contact_message" rows="4" required placeholder="Type your inquiry here..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-sb w-100">
+                    <i class="bi bi-send-fill me-1"></i> Submit Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold d-flex align-items-center gap-2" id="cartDrawerLabel">
+        <i class="bi bi-basket3-fill text-danger"></i> Your Food Basket
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItemsContainer" class="flex-grow-1 overflow-y-auto mb-3"></div>
+
+      <div id="emptyCartNotice" class="text-center py-5">
+        <i class="bi bi-cart-x text-muted" style="font-size: 3.5rem;"></i>
+        <h6 class="mt-3 text-secondary">Your cart is currently empty</h6>
+        <p class="text-muted small">Explore our signature rice, kottu, and biryani to get started!</p>
+        <a href="#menu" class="btn btn-outline-sb btn-sm mt-2" data-bs-dismiss="offcanvas">Browse Menu</a>
+      </div>
+
+      <div class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold fs-6">Subtotal:</span>
+          <span class="fw-bold fs-5 text-danger" id="cartDrawerTotal">Rs. 0.00</span>
+        </div>
+        <button type="button" id="btnCartCheckout" class="btn btn-primary-sb w-100 py-2 d-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#checkoutModal" disabled>
+          <i class="bi bi-check-circle-fill"></i> Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal Dialog -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title font-serif" id="checkoutModalLabel">
+            <i class="bi bi-bag-check-fill text-danger me-2"></i> Complete Your Order
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form id="checkoutOrderForm" onsubmit="event.preventDefault(); bootstrap.Modal.getInstance(document.getElementById('checkoutModal')).hide(); showToast('Order successfully confirmed! Delivering in 30-45 mins.', 'success'); window.ORDER_PLACED_SUCCESS = true; localStorage.removeItem('hotel_sb_cart_items'); location.reload();">
+          <div class="modal-body p-4">
+            <div class="alert alert-light border d-flex justify-content-between align-items-center mb-3">
+              <span class="fw-bold text-muted">Grand Total:</span>
+              <span class="fw-bold fs-5 text-danger" id="checkoutModalGrandTotal">Rs. 0.00</span>
+            </div>
+
+            <div class="mb-3">
+              <label for="order_customer_name" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="order_customer_name" required placeholder="e.g. Kamal Perera">
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="order_customer_email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="order_customer_email" required placeholder="name@example.com">
+              </div>
+              <div class="col-md-6">
+                <label for="order_customer_phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="order_customer_phone" required placeholder="0771234567">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="order_delivery_address" class="form-label">Delivery Address <span class="text-danger">*</span></label>
+              <textarea class="form-control" id="order_delivery_address" rows="2" required placeholder="House number, Street name, City"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="order_payment_method" class="form-label">Payment Method</label>
+              <select class="form-select" id="order_payment_method">
+                <option value="Cash on Delivery" selected>Cash on Delivery (COD)</option>
+                <option value="Card on Delivery">Card on Delivery (POS Machine)</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="order_notes" class="form-label">Special Cooking / Delivery Notes (Optional)</label>
+              <input type="text" class="form-control" id="order_notes" placeholder="e.g. Extra spicy, extra chili paste">
+            </div>
+          </div>
+
+          <div class="modal-footer bg-light">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-sb">Confirm &amp; Place Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Anchor -->
+  <div class="sb-toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo.svg" alt="Hotel S&amp;B Logo" style="height: 42px; filter: brightness(0) invert(1);">
+          </div>
+          <p class="text-light-50 small mb-3">
+            Hotel S&amp;B is your premier culinary destination for authentic Sri Lankan comfort foods. Serving hot griddle-chopped kottu, slow-dum basmati biryani, and wok-fired rice.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Opening Hours</h6>
+          <ul class="list-unstyled small text-light-50">
+            <li class="mb-2 d-flex justify-content-between">
+              <span>Monday – Friday:</span>
+              <strong class="text-white">10:00 AM – 11:00 PM</strong>
+            </li>
+            <li class="mb-2 d-flex justify-content-between">
+              <span>Saturday – Sunday:</span>
+              <strong class="text-white">09:30 AM – 11:30 PM</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Contact &amp; Location</h6>
+          <ul class="list-unstyled small text-light-50">
+            <li class="mb-2"><i class="bi bi-geo-alt-fill text-danger me-2"></i> No. 88, Kandy Road, Anuradhapura, Sri Lanka</li>
+            <li class="mb-2"><i class="bi bi-telephone-fill text-danger me-2"></i> +94 25 222 3456 / +94 77 123 4567</li>
+            <li class="mb-2"><i class="bi bi-envelope-fill text-danger me-2"></i> orders@hotelsb.lk</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center small text-light-50">
+        <div class="col-md-6 text-center text-md-start">
+          &copy; 2026 Hotel S&amp;B. All rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <span class="badge bg-secondary">ICT 2209 - Web Technologies Mini Project</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Project JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
