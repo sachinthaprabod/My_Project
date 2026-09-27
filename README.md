@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hotel S&B – Online Food Ordering System
 
 **Course:** ICT 2209 – Web Technologies  
@@ -140,3 +141,7 @@ For quick evaluation and testing, the database includes pre-configured customer 
 
 Developed for **ICT 2209 – Web Technologies Mini Project**, Rajarata University of Sri Lanka.  
 All database scripts, backend endpoints, and frontend assets are designed to run cleanly both offline and online without external API dependencies.
+=======
+# My_Project
+Sachintha prabod Create the Hottle S&amp;B 
+>>>>>>> eab6122f72fc67fac42bcdabd7e0aa4d317530eb
